@@ -100,4 +100,18 @@ function evaluateGameState() {
       }
     });
   }
+  if (xClaimedSpaces.length + oClaimedSpaces.length >= 9){
+    document.querySelector(`.js-victory-text`).innerHTML =
+          "<p class = 'css-victory-text'>It's a Tie!</p><button class='js-play-again-button  css-play-again-button'>Play Again</button>";
+        document
+          .querySelector(".js-play-again-button")
+          .addEventListener("click", () => {
+            renderBoard();
+            gameInteraction();
+            xClaimedSpaces = [];
+            oClaimedSpaces = [];
+            playPiece = "X";
+            document.querySelector(`.js-victory-text`).innerHTML = "";
+          });
+  }
 }
