@@ -35,6 +35,16 @@ body {
   cursor: "click";
 }
 
+.css-play-again-button:hover {
+  opacity: .6;
+}
+
+
+.css-play-again-button:active {
+  opacity: .2;
+}
+
+
 .css-valid-square {
   background-color: white;
   font-size: 40px;
@@ -42,4 +52,14 @@ body {
   border: none;
   width: 100%;
   height: 100%;
+  transition: opacity .5s;
+}
+
+.css-valid-square:hover {
+  opacity: .6;
+}
+
+
+.css-valid-square:active {
+  opacity: .2;
 }
