@@ -59,6 +59,7 @@ function gameInteraction() {
           playPiece = "X";
           currentElement.removeEventListener("click", userTurn);
           evaluateGameState();
+          
         }
       }
     });
@@ -83,7 +84,9 @@ function evaluateGameState() {
             oClaimedSpaces = [];
             playPiece = "X";
             document.querySelector(`.js-victory-text`).innerHTML = "";
+            
           });
+        return;
       } else if (oPass) {
         document.querySelector(`.js-victory-text`).innerHTML =
           "<p class = 'css-victory-text'>O WINS!</p><button class='js-play-again-button  css-play-again-button'>Play Again</button>";
@@ -96,7 +99,9 @@ function evaluateGameState() {
             oClaimedSpaces = [];
             playPiece = "X";
             document.querySelector(`.js-victory-text`).innerHTML = "";
+            
           });
+        return;
       }
     });
   }
